@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
     user = find_by_email(email)
     return nil if user.nil?
     return user if user.has_password?(submitted_password)
-    # nil is automatically returned if we reach here
+    # nil is automatically/implicitly returned if we reach here
   end
   
   private
